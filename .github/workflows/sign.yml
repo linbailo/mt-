@@ -1,4 +1,4 @@
-name: 葫芦侠3楼签到
+name: mt
 
 on:
   workflow_dispatch: # 手动触发
@@ -30,6 +30,3 @@ jobs:
         env:
             username: ${{ secrets.username }}
             password: ${{ secrets.password }}
-            dingding: ${{ secrets.dingding }}
-            SCKEY:   ${{ secrets.SCKEY }}
-            notice:   ${{ secrets.notice }} 
