@@ -1,4 +1,4 @@
-# mt-
+# mt论坛自动化签到
 私人
 
 Action secrets 需要填的参数为：
