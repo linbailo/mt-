@@ -1,0 +1,31 @@
+name: mt论坛
+
+on:
+  workflow_dispatch: # 手动触发
+  schedule: # 计划任务触发
+    - cron: '0 9 * * *'
+    # cron表达式，时区是UTC时间，比我们早8小时，如上所表示的是每天0点0分（24点整）
+    # 建议每个人通过设置 GitHub Environments 的方式来设定为自己的目标运行时间（详细设置方法见文档说明）
+  watch:
+    types: [started]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      # 检出
+      - name: Checkout
+        uses: actions/checkout@v2
+      # 安装 Python
+      - name: 'Set up Python'
+        uses: actions/setup-python@v1
+        with:
+          python-version: 3.7
+         
+      - name: '安装 requirements'
+        run: pip install -r ./requirements.txt 
+        
+      - name: '运行签到脚本'  
+        run: python3 lin.py 
+        env:
+            username: ${{ secrets.username }}
+            password: ${{ secrets.password }}
