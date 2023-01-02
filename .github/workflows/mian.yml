@@ -21,7 +21,7 @@ jobs:
         with:
           python-version: 3.7
          
-      - name: '安装 requirements'
+      - name: '安装库 requirements'
         run: pip install -r ./requirements.txt 
         
       - name: '运行签到脚本'  
