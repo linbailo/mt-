@@ -24,7 +24,12 @@ def main(username,password):
     qd1 = requests.post('https://bbs.binmt.cc/k_misign-sign.html',data=data,headers=headers)
     qd = requests.get('https://bbs.binmt.cc/k_misign-sign.html',data=data,headers=headers)
     #print(qd.text)
-    print(re.findall('.....签.......',qd.text)[2])
+    if '排名' in qd.text:
+		jinb = re.findall('积分奖励</h4>.*?></span>',qd.text,re.S)
+		jingbi = re.findall('value="(.*?)"',str(jinb))[0]
+		print(f"{re.findall('签到排名：.*? ',qd.text)[0]}  获得金币：{jingbi}")
+	else:
+		print('签到失败')
 
 
 if __name__ == '__main__':
