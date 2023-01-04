@@ -23,7 +23,8 @@ def main(username,password):
     headers = {"Cookie":"cQWy_2132_saltkey=" + saltkey + ";cQWy_2132_auth=" + cQWy_2132_auth,"Referer":"https://bbs.binmt.cc/forum.php","User-Agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.45 Safari/537.36"}
     qd1 = requests.post('https://bbs.binmt.cc/k_misign-sign.html',data=data,headers=headers)
     qd = requests.get('https://bbs.binmt.cc/k_misign-sign.html',data=data,headers=headers)
-    if '排名' in qd.text:jinb = re.findall('积分奖励</h4>.*?></span>',qd.text,re.S)
+    if '排名' in qd.text:
+        jinb = re.findall('积分奖励</h4>.*?></span>',qd.text,re.S)
         jingbi = re.findall('value="(.*?)"',str(jinb))[0]
         print(f"{re.findall('签到排名：.*? ',qd.text)[0]}  获得金币：{jingbi}")
      else:
