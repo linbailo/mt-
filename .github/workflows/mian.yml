@@ -21,7 +21,8 @@ jobs:
           python-version: 3.7
          
       - name: '安装库 requirements'
-        run: pip install -r ./requirements.txt 
+        run: pip install -r ./requirements.txt python -m pip install --upgrade pip
+        pip install -r requirements.txt
         
       - name: '运行签到脚本'  
         run: python3 lin.py 
