@@ -14,10 +14,10 @@ jobs:
     steps:
       # 检出
       - name: Checkout
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
       # 安装 Python
       - name: 'Set up Python'
-        uses: actions/setup-python@v1
+        uses: actions/setup-python@v3
         with:
           python-version: 3.7
          
