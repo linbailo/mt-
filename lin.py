@@ -1,6 +1,7 @@
 import requests
 import re
 import os
+import time
 
 #qq:1628708538
 
@@ -28,6 +29,7 @@ def main(username,password):
         jinb = re.findall('积分奖励</h4>.*?></span>',qd.text,re.S)
         jingbi = re.findall('value="(.*?)"',str(jinb))[0]
         print(f"{re.findall('签到排名：.*? ',qd.text)[0]}  获得金币：{jingbi}")
+        print(time.strftime("%H时%M分%S秒", time.localtime()))
     else:
         print('签到失败')
 
