@@ -28,7 +28,7 @@ def main(username,password):
     time.sleep(5)
     headers['referer']='https://bbs.binmt.cc/member.php?mod=logging&action=login&infloat=yes&handlekey=login&inajax=1&ajaxtarget=fwin_content_login'
     chusihua = session.get('https://bbs.binmt.cc/member.php?mod=logging&action=login&infloat=yes&handlekey=login&inajax=1&ajaxtarget=fwin_content_login',headers=headers)
-    print(re.findall('loginhash=(.*?)">', chusihua.text))
+    print(chusihua.status_code)
     loginhash = re.findall('loginhash=(.*?)">', chusihua.text)[0]
     formhash = re.findall('formhash" value="(.*?)".*? />', chusihua.text)[0]
     denurl = f'https://bbs.binmt.cc/member.php?mod=logging&action=login&loginsubmit=yes&handlekey=login&loginhash={loginhash}&inajax=1'
