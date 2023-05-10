@@ -25,6 +25,8 @@ session = requests.session()
 def main(username,password):
     headers={'User-Agent': ua}
     session.get('https://bbs.binmt.cc/member.php?mod=logging&action=login&infloat=yes&handlekey=login&inajax=1&ajaxtarget=fwin_content_login',headers=headers)
+    time.sleep(5)
+    headers['referer']='https://bbs.binmt.cc/member.php?mod=logging&action=login&infloat=yes&handlekey=login&inajax=1&ajaxtarget=fwin_content_login'
     chusihua = session.get('https://bbs.binmt.cc/member.php?mod=logging&action=login&infloat=yes&handlekey=login&inajax=1&ajaxtarget=fwin_content_login',headers=headers)
     print(re.findall('loginhash=(.*?)">', chusihua.text))
     loginhash = re.findall('loginhash=(.*?)">', chusihua.text)[0]
