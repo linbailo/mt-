@@ -3,10 +3,10 @@ mt论坛自动签到
 
 暂不支持多个账号，我知道你们肯定没有这个需求
 
-账号变量 mtusername 
-密码变量 mtpassword
-export mtusername=""
-export mtpassword=""
+账号变量 username 
+密码变量 password
+export username=""
+export password=""
 
 cron: 0 0,7, * * *
 const $ = new Env("mt论坛");
@@ -55,11 +55,11 @@ if __name__ == '__main__':
     #username.encode("utf-8")
     #密码
     password = ''
-    if 'mtusername' in os.environ:
+    if 'username' in os.environ:
         username = os.environ.get("username")
     else:
         print('不存在青龙、github变量')
-    if 'mtpassword' in os.environ:
+    if 'password' in os.environ:
         password = os.environ.get("password")
     
     try:
