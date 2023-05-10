@@ -17,7 +17,7 @@ import os
 import time
 
 #qq:1628708538
-
+requests.urllib3.disable_warnings()
 #设置ua
 ua = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.45 Safari/537.36'
 session = requests.session()
@@ -52,16 +52,13 @@ def main(username,password):
 
 if __name__ == '__main__':
     #账号
-    username = '林lin'
-    #username.encode("utf-8")
-    #密码
-    password = '13977922831'
-    if 'mtusername' in os.environ:
-        username = os.environ.get("mtusername")
+
+    if 'username' in os.environ:
+        username = os.environ.get("username")
     else:
         print('不存在青龙、github变量')
-    if 'mtpassword' in os.environ:
-        password = os.environ.get("mtpassword")
+    if 'password' in os.environ:
+        password = os.environ.get("password")
     
     try:
         main(username,password)
