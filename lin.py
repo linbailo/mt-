@@ -25,7 +25,7 @@ session = requests.session()
 def main(username,password):
     headers={'User-Agent': ua}
     #session.get('https://bbs.binmt.cc/member.php?mod=logging&action=login&infloat=yes&handlekey=login&inajax=1&ajaxtarget=fwin_content_login',headers=headers)
-    chusihua = session.get('https://bbs.binmt.cc/member.php?mod=logging&action=login&infloat=yes&handlekey=login&inajax=1&ajaxtarget=fwin_content_login',headers=headers)
+    chusihua = session.get('https://bbs.binmt.cc/member.php?mod=logging&action=login&infloat=yes&handlekey=login&inajax=1&ajaxtarget=fwin_content_login',headers=headers,proxies={"http": "http://36.6.145.111:8089"})
     print(chusihua.text)
     #loginhash = re.findall('loginhash=(.*?)">', chusihua.text)[0]
     formhash = re.findall('formhash" value="(.*?)".*? />', chusihua.text)[0]
