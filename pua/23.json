@@ -1,0 +1,56 @@
+{
+     "code": "0",
+     "msg": "获取成功",
+     "data": {
+          "Version": "1.0",
+          "parameter": {
+               "is_display": false
+          },
+          "Down_Api": "https://down.eeapi.cn/api/down_eeapi.php?url=",
+          "Down_pic": "https://down.eeapi.cn/api/down_pic.php?url=",
+          "Down_Api1": "https://xcx.crqsy.top/api/down.php?url=",
+          "Down_pic1": "https://xcx.crqsy.top/api/down_pic.php?url=",
+          "Api_code": "200",
+          "jiaocheng": [
+               {
+                    "id": 0,
+                    "name": "独立版小程序源码无任何限制永久免费使用，搭建教程及源码下载",
+                    "url": ".html",
+                    "img": "https://test.srvv.cn/images/kcpic/1.png"
+               } 
+          ]
+     },
+     "wx653b4bfdc8be14ee": {
+          "Api34":"https://api.srvv.cn/api/video/C29180021A9710EFEE2EDC9863AEF6B97/1/",
+          "Api1":"https://api.eeapi.cn/api/index/jiexiapi",
+          "Api":"https://api.ciyer.com/api/dsp/?uid=1664894581&my=chlnqrxDEGJNRST367&url=",
+          "Api111":"https://jx.crqsy.top/api/dsp/3212C566C692764B846E9ECC6080FE6DABB21EE791DBC579A/202036993/?url=",
+          "method": "GET",
+          "method1": "POST",
+          "appidappid": "wx7760f3b46dd30113",
+          "Down_Api": "https://jx.xcuncle.top/addons/qsy_un66188/down.php?url=",
+          "app_name": "图图去水印lite",
+          "app_key": "ZwXxB7z7d6n0dfC3Rbk4t6MdTdU390Q1U1l3RaMDc4",
+          "home_notice": "注意：本程序无广告强求！解析不了，请及时联系客服更新！！",
+          "analysis_text": "解析成功，麻烦您多多分享哦",
+          "save_text": "我们始终坚持全免费，无任何限制。",
+          "foot_text": "视频归平台及作者所有，本应用不储存任何视频或图片",
+          "share_title": "您的好友给你分享一款免费短视频去水印小程序，赶紧试试吧！",
+          "share_imageUrl": "https://api.eeapi.cn/images/banner.jpg",
+          "downloadErrorMsg": "1.保存视频或图片到手机相册，需要用户“允许”授权后才可以保存到相册。 2. 由于该视频文件大小超出小程序下载限制，请复制视频地址后，用手机自带浏览器打开并下载.",
+          "rewardedVideoAdTips": "提示：广告未播放完成，无法正常保存视频，每天只要看一次广告，即可无限制使用。",
+          "banner_imageUrl": [
+               "https://api.eeapi.cn/images/banner.jpg"
+          ],
+          "praise": "提示：超过2分钟的视频请复制链接用手机自带浏览器下载。",
+          "BannerAD_ID": "adunit-8359bbbf4fb559b1",
+          "videoAD_ID": "1",
+          "question_video_ad": "wx653b4bfdc8be14ee",
+          "index_video_ad": "1",
+          "banner_ad": "adunit-8359bbbf4fb559b1",
+          "parameter": {
+               "is_display": false,
+               "frequency": 3
+          }
+     }
+}
