@@ -56,7 +56,7 @@ if __name__ == '__main__':
     #username.encode("utf-8")
     #密码
     password = ''
-    if 'mtluntan' in os.environ:
+    if 'MTLUNTAN' in os.environ:
         mtluntan = os.environ.get("mtluntan").split("&")
         username = mtluntan[0]
         password = mtluntan[1]
