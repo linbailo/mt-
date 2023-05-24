@@ -2,6 +2,7 @@
 私人
 
 已经无法使用github action运行，建议本地运行
+论坛不能国外访问了
 青龙拉库地址 
 ```
 https://github.com/linbailo/zyqinglong
